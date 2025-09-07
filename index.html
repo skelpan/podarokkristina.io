@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Поздравление для Кристины</title>
+  <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+  <div class="mobile-notification" id="mobileNotification">
+    <i class="fas fa-hand-pointer"></i>
+    <span>Коснитесь подарка, чтобы открыть</span>
+  </div>
+
+  <!-- Виртуальный подарок -->
+  <div class="gift-container" id="giftContainer">
+    <div class="gift-box" id="giftBox">
+      <div class="gift-lid"></div>
+      <div class="gift-body">
+        <div class="gift-bow">
+          <div class="bow-center"></div>
+          <div class="bow-loop left-loop"></div>
+          <div class="bow-loop right-loop"></div>
+        </div>
+      </div>
+      <div class="gift-label">Для Кристины</div>
+    </div>
+    <div class="gift-message">Коснись, чтобы открыть подарок 🎁</div>
+  </div>
+
+  <div class="container" id="mainContent" style="display: none;">
+    <header class="header">
+      <div class="decoration">
+        <span class="decoration-item">✨</span>
+        <span class="decoration-item">🎓</span>
+        <span class="decoration-item">🌟</span>
+      </div>
+      <h1 class="title">Дорогая Кристина!</h1>
+      <p class="subtitle">Прими наши искренние поздравления</p>
+      
+      <div class="scroll-indicator">
+        <div class="scroll-arrow">
+          <i class="fas fa-chevron-down"></i>
+        </div>
+      </div>
+    </header>
+    
+    <main class="main-content">
+      <div class="photo-section">
+        <div class="photo-container">
+          <img src="img/жжж.png" alt="Кристина" class="photo" id="mainPhoto">
+          
+          <div class="photo-controls">
+            <button class="control-btn" id="rotateBtn">
+              <i class="fas fa-sync-alt"></i>
+            </button>
+            <button class="control-btn" id="zoomBtn">
+              <i class="fas fa-search-plus"></i>
+            </button>
+            <button class="control-btn" id="effectBtn">
+              <i class="fas fa-magic"></i>
+            </button>
+          </div>
+        </div>
+      </div>
+      
+      <div class="message-section">
+        <div class="message-container">
+          <div class="message-scroll">
+            <p class="message">
+              В этот особенный день хотим выразить тебе наши самые тёплые пожелания. 
+              Пусть каждый новый день приносит радость открытий, вдохновение для свершений 
+              и уверенность в своих силах. Желаем ярких впечатлений, интересных проектов 
+              и гармонии во всех начинаниях!
+            </p>
+          </div>
+          
+          <div class="interactive-element">
+            <button class="special-btn" id="specialBtn">
+              <i class="fas fa-star"></i>
+              <span>Сюрприз</span>
+            </button>
+            <div class="hidden-message" id="hiddenMessage">
+              <p>Пусть этот год станет временем новых возможностей и прекрасных моментов! Твои идеи и стремления ведут к успеху.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <div class="qualities-section">
+        <h2 class="section-title">Твои качества</h2>
+        <div class="qualities-grid">
+          <div class="quality-item" data-quality="1">
+            <div class="quality-icon"><i class="fas fa-lightbulb"></i></div>
+            <h3>Креативность</h3>
+            <p>Нестандартный подход к решениям</p>
+            <div class="quality-progress">
+              <div class="progress-bar" style="width: 90%"></div>
+            </div>
+          </div>
+          <div class="quality-item" data-quality="2">
+            <div class="quality-icon"><i class="fas fa-trophy"></i></div>
+            <h3>Настойчивость</h3>
+            <p>Умение достигать поставленных целей</p>
+            <div class="quality-progress">
+              <div class="progress-bar" style="width: 85%"></div>
+            </div>
+          </div>
+          <div class="quality-item" data-quality="3">
+            <div class="quality-icon"><i class="fas fa-hands-helping"></i></div>
+            <h3>Отзывчивость</h3>
+            <p>Готовность помочь и поддержать</p>
+            <div class="quality-progress">
+              <div class="progress-bar" style="width: 95%"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="memories-section">
+        <h2 class="section-title">Виртуальный альбом</h2>
+        <div class="memories-slider">
+          <div class="slider-container" id="sliderContainer">
+            <div class="slider-item">
+              <div class="memory-card">
+                <div class="memory-icon">📚</div>
+                <h4>Учебные достижения</h4>
+                <p>Успехи в освоении новых знаний</p>
+              </div>
+            </div>
+            <div class="slider-item">
+              <div class="memory-card">
+                <div class="memory-icon">🎨</div>
+                <h4>Творческие проекты</h4>
+                <p>Реализация интересных идей</p>
+              </div>
+            </div>
+            <div class="slider-item">
+              <div class="memory-card">
+                <div class="memory-icon">🚀</div>
+                <h4>Достижения</h4>
+                <p>Достигнутые цели и успехи</p>
+              </div>
+            </div>
+          </div>
+          <div class="slider-controls">
+            <button class="slider-btn prev-btn" id="prevBtn">
+              <i class="fas fa-chevron-left"></i>
+            </button>
+            <button class="slider-btn next-btn" id="nextBtn">
+              <i class="fas fa-chevron-right"></i>
+            </button>
+          </div>
+        </div>
+      </div>
+    </main>
+    
+    <footer class="footer">
+      <div class="signature">
+        <p>С наилучшими пожеланиями,</p>
+        <p class="year">2025</p>
+      </div>
+    </footer>
+  </div>
+
+  <div class="mobile-menu">
+    <button class="menu-btn" id="homeBtn">
+      <i class="fas fa-home"></i>
+    </button>
+    <button class="menu-btn" id="photoBtn">
+      <i class="fas fa-image"></i>
+    </button>
+    <button class="menu-btn" id="qualitiesBtn">
+      <i class="fas fa-star"></i>
+    </button>
+    <button class="menu-btn" id="memoriesBtn">
+      <i class="fas fa-images"></i>
+    </button>
+  </div>
+
+  <canvas id="particlesCanvas"></canvas>
+  <script src="script.js"></script>
+</body>
+</html>
